@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Polyclinic Reception</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="polyclinic_official_name">Polyclinic Reception named after Bogdan Mashchenko</string>
+
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">confirm password</string>
+</resources>

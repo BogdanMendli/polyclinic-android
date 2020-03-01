@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="@dimen/match_parent"
+    android:layout_height="@dimen/wrap_content"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/username_et"
+        android:layout_width="@dimen/match_parent"
+        android:layout_height="@dimen/wrap_content"
+        android:hint="@string/hint_username"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:focusedByDefault="true"
+        android:background="@drawable/bg_primary_edit_text"
+        android:textColorHint="@color/gray_3"
+        android:padding="@dimen/padding_tiny"
+        style="@style/TextAppearance_SemiBold"
+        tools:text="Some username"/>
+
+    <EditText
+        android:id="@+id/password_et"
+        android:layout_width="@dimen/match_parent"
+        android:layout_height="@dimen/wrap_content"
+        android:hint="@string/hint_password"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_primary_edit_text"
+        android:textColorHint="@color/gray_3"
+        android:padding="@dimen/padding_big_tiny"
+        style="@style/TextAppearance_SemiBold"
+        tools:text="sadfesfsfsf34234" />
+
+    <LinearLayout
+        android:id="@+id/auth_actions"
+        android:layout_width="@dimen/match_parent"
+        android:layout_height="@dimen/wrap_content"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_mb"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:text="@string/login"
+            android:elevation="6dp"
+            android:stateListAnimator="@null"
+            android:translationZ="@dimen/padding_tiny"
+            android:layout_marginRight="@dimen/padding_big_tiny"
+            style="@style/RoundedCornerButton"/>
+
+        <TextView
+            android:id="@+id/sign_up_tv"
+            android:layout_width="@dimen/wrap_content"
+            android:layout_height="@dimen/wrap_content"
+            android:text="@string/sign_up"
+            style="@style/TextAppearance_SemiBold.DefaultText"/>
+    </LinearLayout>
+</LinearLayout>

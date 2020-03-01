@@ -1,0 +1,2 @@
+rootProject.name='polyclinic-android'
+include ':app'
