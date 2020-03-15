@@ -1,4 +1,6 @@
 <resources>
+    <dimen name="text_size_default_minus_4">11sp</dimen>
+    <dimen name="text_size_default_minus_3">12sp</dimen>
     <dimen name="text_size_default_minus_2">13sp</dimen>
     <dimen name="text_size_default_minus_1">14sp</dimen>
     <dimen name="text_size_default">15sp</dimen>
@@ -7,6 +9,10 @@
     <dimen name="text_size_default_plus_3">18sp</dimen>
     <dimen name="text_size_default_plus_4">19sp</dimen>
     <dimen name="text_size_default_plus_5">20sp</dimen>
+    <dimen name="text_size_default_plus_6">21sp</dimen>
+    <dimen name="text_size_default_plus_7">22sp</dimen>
+    <dimen name="text_size_default_plus_8">23sp</dimen>
+    <dimen name="text_size_default_plus_9">24sp</dimen>
 
     <dimen name="frame_base_padding_horizontal">40dp</dimen>
     <dimen name="frame_base_padding_vertical">40dp</dimen>
@@ -16,6 +22,7 @@
     <dimen name="padding_tiny">4dp</dimen>
     <dimen name="padding_big_tiny">6dp</dimen>
     <dimen name="padding_normal">12dp</dimen>
+    <dimen name="padding_normal_double">24dp</dimen>
 
     <item name="match_parent" type="dimen">-1</item>
     <item name="wrap_content" type="dimen">-2</item>

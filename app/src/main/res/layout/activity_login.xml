@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -23,14 +24,13 @@
         style="@style/TextAppearance_SemiBold"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/autocomplete_text_input"
+        android:id="@+id/login_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/padding_normal"
         android:textColorHint="@color/gray_3">
 
         <AutoCompleteTextView
-            android:id="@+id/text_login"
+            android:id="@+id/input_username"
             style="@style/BaseRegInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,15 +41,24 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/incorrect_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/incorrect_login"
+        android:layout_marginBottom="@dimen/padding_big_tiny"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_default_minus_4"
+        android:visibility="invisible"/>
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_text_input"
+        android:id="@+id/password_input_layout"
         style="@style/RegInputPasswordHint"
-        android:layout_marginBottom="@dimen/padding_normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/password_text"
+            android:id="@+id/password_input"
             style="@style/BaseRegInput.Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,14 +66,50 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/incorrect_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/incorrect_password"
+        android:layout_marginBottom="@dimen/padding_big_tiny"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_default_minus_4"
+        android:visibility="invisible"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirm_password_input_layout"
+        style="@style/RegInputPasswordHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/confirm_password_input"
+            style="@style/BaseRegInput.Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_confirm_password" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/incorrect_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/incorrect_confirm_password"
+        android:layout_marginBottom="@dimen/padding_big_tiny"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_default_minus_4"
+        android:visibility="invisible"/>
+
     <LinearLayout
         android:id="@+id/auth_actions"
         android:layout_width="@dimen/match_parent"
         android:layout_height="@dimen/wrap_content"
+        android:layout_marginBottom="@dimen/padding_big_tiny"
         android:gravity="center">
 
         <Button
-            android:id="@+id/login_mb"
+            android:id="@+id/login_button"
             android:layout_width="@dimen/wrap_content"
             android:layout_height="@dimen/wrap_content"
             android:text="@string/login"
@@ -76,9 +121,20 @@
 
         <TextView
             android:id="@+id/sign_up_tv"
+            style="@style/TextAppearance_SemiBold.DefaultText"
             android:layout_width="@dimen/wrap_content"
-            android:layout_height="@dimen/wrap_content"
-            android:text="@string/sign_up"
-            style="@style/TextAppearance_SemiBold.DefaultText"/>
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/error_login_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_not_exist"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_default"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
 </LinearLayout>

@@ -2,18 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.polyclinic.polyclinic.android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/polyclinic_logo_main"
-        android:roundIcon="@drawable/polyclinic_logo_main"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/polyclinic_logo_main"
         android:supportsRtl="true"
         android:theme="@style/PolyclinicTheme">
+        <activity android:name=".polyclinic.AllPatientActivity"></activity>
+        <activity android:name=".polyclinic.AddPatientActivity" />
+        <activity android:name=".polyclinic.AllWardsActivity" />
+        <activity android:name=".polyclinic.PolyclinicMainToolbarActivity" />
         <activity
+            android:name=".login.LoginActivity"
             android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
-            android:name=".login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>

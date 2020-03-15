@@ -3,11 +3,28 @@
     <string name="title_activity_login">LoginActivity</string>
 
     <string name="polyclinic_official_name">Polyclinic Reception named after Bogdan Mashchenko</string>
+    <string name="polyclinic_title">Polyclinic Reception</string>
 
     <string name="login">Login</string>
     <string name="sign_up">Sign up</string>
+    <string name="cancel">Cancel</string>
+    <string name="register">Register</string>
+
+    <string name="incorrect_login">Login is incorrect</string>
+    <string name="incorrect_password">Password is incorrect</string>
+    <string name="incorrect_confirm_password">Passwords don\'t match</string>
+    <string name="user_not_exist">User not exist</string>
 
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
-    <string name="hint_confirm_password">confirm password</string>
+    <string name="hint_confirm_password">Confirm password</string>
+
+    <string name="welcome_text">Welcome, %s!</string>
+    <string name="onboarding_text">You can view the list of patients in the clinic, wards , and add new patients</string>
+    <string name="all_person_all_patients_text">All patients</string>
+    <string name="all_person_all_text">All</string>
+    <string name="add_person_add_patient_text">Add patient</string>
+    <string name="add_person_add_text">Add</string>
+    <string name="all_wards_all_wards_text">All wards</string>
+    <string name="all_wards_wards_text">Wards</string>
 </resources>

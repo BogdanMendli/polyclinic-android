@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/all_person_item"
+        android:title="@string/all_person_all_patients_text"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add_person_item"
+        android:title="@string/add_person_add_patient_text"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/all_wards_item"
+        android:title="@string/all_wards_all_wards_text"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
+</menu>
