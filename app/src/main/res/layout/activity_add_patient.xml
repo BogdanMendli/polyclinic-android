@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_primary"
-    tools:context=".polyclinic.AddPatientActivity">
+    tools:context=".polyclinic.patient.add.AddPatientActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -32,4 +32,150 @@
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom"
         app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/last_name_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray_3"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintTop_toBottomOf="@id/base_toolbar_shadow">
+
+        <AutoCompleteTextView
+            android:id="@+id/last_name_input"
+            style="@style/BaseRegInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_last_name"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:paddingBottom="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/first_name_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray_3"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintTop_toBottomOf="@id/last_name_input_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/first_name_input"
+            style="@style/BaseRegInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_first_name"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:paddingBottom="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/father_name_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray_3"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintTop_toBottomOf="@id/first_name_input_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/father_name_input"
+            style="@style/BaseRegInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_father_name"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:paddingBottom="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/diagnosis_name_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray_3"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_big_tiny"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ward_name_input_layout"
+        app:layout_constraintTop_toBottomOf="@id/father_name_input_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/diagnosis_name_input"
+            style="@style/BaseRegInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_diagnosis_name"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:paddingBottom="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ward_name_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/gray_3"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_big_tiny"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/diagnosis_name_input_layout"
+        app:layout_constraintTop_toBottomOf="@id/father_name_input_layout">
+
+        <AutoCompleteTextView
+            android:id="@+id/ward_name_input"
+            style="@style/BaseRegInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_ward_name"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:paddingBottom="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/add_patient_button"
+        android:layout_width="@dimen/wrap_content"
+        android:layout_height="@dimen/wrap_content"
+        android:text="@string/add_person_add_text"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
+        android:translationZ="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_normal_double"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ward_name_input_layout"
+        style="@style/RoundedCornerButton"/>
+
+    <TextView
+        android:id="@+id/error_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_default"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintTop_toBottomOf="@id/add_patient_button"
+        tools:text="@string/user_not_exist" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_normal"
+        app:layout_constraintTop_toBottomOf="@id/add_patient_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_polyc_main" />
 </androidx.constraintlayout.widget.ConstraintLayout>

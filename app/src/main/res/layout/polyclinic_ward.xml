@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/padding_normal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ward_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ward"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/ward_name_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/single_ward"
+        android:layout_marginLeft="@dimen/padding_normal"
+        style="@style/TextAppearance_SemiBold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ward_image" />
+
+    <TextView
+        android:id="@+id/ward_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="@dimen/padding_tiny"
+        android:layout_marginRight="@dimen/padding_normal"
+        app:layout_constraintBaseline_toBaselineOf="@id/ward_name_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ward_name_header"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="gdjgudrhgiudhgudrhgughkruhgdkurghdrkughdrughdrughdrughdg"/>
+
+    <TextView
+        android:id="@+id/ward_max_count_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/single_ward_max_count"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:layout_marginTop="@dimen/padding_tiny"
+        style="@style/TextAppearance_SemiBold"
+        app:layout_constraintTop_toBottomOf="@id/ward_name_header"
+        app:layout_constraintLeft_toRightOf="@id/ward_image" />
+
+    <TextView
+        android:id="@+id/ward_max_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_tiny"
+        android:layout_marginRight="@dimen/padding_normal"
+        app:layout_constraintBaseline_toBaselineOf="@id/ward_max_count_header"
+        app:layout_constraintTop_toBottomOf="@id/ward_name"
+        app:layout_constraintLeft_toRightOf="@id/ward_max_count_header"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="gdjgudrhgiudhgudrhgughkruhgdkurghdrkughdrughdrughdrughdg"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ward_patient_recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_tiny"
+        android:layout_marginRight="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ward_image"
+        app:layout_constraintTop_toBottomOf="@id/ward_max_count_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_tiny"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ward_patient_recycler" />
+</androidx.constraintlayout.widget.ConstraintLayout>

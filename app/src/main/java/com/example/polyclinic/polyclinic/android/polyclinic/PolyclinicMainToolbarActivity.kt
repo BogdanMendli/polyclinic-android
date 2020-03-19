@@ -1,14 +1,15 @@
 package com.example.polyclinic.polyclinic.android.polyclinic
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
-import android.widget.Toast
 import com.example.polyclinic.polyclinic.android.BaseToolbarActivity
 import com.example.polyclinic.polyclinic.android.R
+import com.example.polyclinic.polyclinic.android.polyclinic.patient.add.AddPatientActivity
+import com.example.polyclinic.polyclinic.android.polyclinic.patient.all.AllPatientActivity
+import com.example.polyclinic.polyclinic.android.polyclinic.wards.all.AllWardsActivity
 
 class PolyclinicMainToolbarActivity : BaseToolbarActivity() {
 

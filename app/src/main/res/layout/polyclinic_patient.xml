@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_normal"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/person_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/man"
+        android:layout_marginLeft="@dimen/padding_normal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/person_fio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal"
+        style="@style/TextAppearance_SemiBold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginRight="@dimen/padding_normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/person_image"
+        tools:text="drgdrgrdgdrgggggggrgrgrgdgjhduglihzdighdrighzdliugrhdlighdlighrzdhgihglgruhiruguhrugrguh"/>
+
+    <TextView
+        android:id="@+id/person_diagnosis_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/single_diagnosis"
+        android:layout_marginBottom="@dimen/padding_normal"
+        style="@style/TextAppearance_SemiBold"
+        app:layout_constraintBottom_toTopOf="@id/person_ward_header"
+        app:layout_constraintLeft_toRightOf="@id/person_image"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/person_diagnosis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_tiny"
+        android:layout_marginRight="@dimen/padding_normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/person_diagnosis_header"
+        app:layout_constraintBottom_toTopOf="@id/person_ward_header"
+        tools:text="gdjgudrhgiudhgudrhgughkruhgdkurghdrkughdrughdrughdrughdg"/>
+
+    <TextView
+        android:id="@+id/person_ward_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/single_ward"
+        style="@style/TextAppearance_SemiBold"
+        app:layout_constraintLeft_toRightOf="@id/person_image"
+        app:layout_constraintBottom_toBottomOf="@id/person_image" />
+
+    <TextView
+        android:id="@+id/person_ward"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginLeft="@dimen/padding_tiny"
+        android:layout_marginRight="@dimen/padding_normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/person_ward_header"
+        app:layout_constraintBottom_toBottomOf="@id/person_image"
+        tools:text="rfrsjrfijsf;ijsefjsfeoisjfjsefisjflisjflisjfsijefisefj"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

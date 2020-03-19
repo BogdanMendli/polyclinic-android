@@ -18,6 +18,11 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_first_name">First name</string>
+    <string name="hint_father_name">Father name</string>
+    <string name="hint_diagnosis_name">Diagnosis</string>
+    <string name="hint_ward_name">Ward</string>
 
     <string name="welcome_text">Welcome, %s!</string>
     <string name="onboarding_text">You can view the list of patients in the clinic, wards , and add new patients</string>
@@ -25,6 +30,9 @@
     <string name="all_person_all_text">All</string>
     <string name="add_person_add_patient_text">Add patient</string>
     <string name="add_person_add_text">Add</string>
+    <string name="single_ward">Ward : </string>
+    <string name="single_ward_max_count">Max count : </string>
+    <string name="single_diagnosis">Diagnosis : </string>
     <string name="all_wards_all_wards_text">All wards</string>
     <string name="all_wards_wards_text">Wards</string>
 </resources>

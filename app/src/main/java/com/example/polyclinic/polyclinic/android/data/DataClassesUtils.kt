@@ -23,22 +23,41 @@ data class Role(
 
 data class Ward(
     val id: Int,
+    @SerializedName("name")
+    @Expose
     val name: String,
-    val maxCount: Int
+    @SerializedName("maxCount")
+    @Expose
+    val maxCount: Int,
+    @SerializedName("peopleEntities")
+    @Expose
+    val patients: List<People>
 )
 
 data class Diagnosis(
     val id: Int,
+    @SerializedName("name")
+    @Expose
     val name: String
 )
 
 data class People(
     val id: Int,
+    @SerializedName("firstName")
+    @Expose
     val firstName: String,
+    @SerializedName("lastName")
+    @Expose
     val lastName: String,
+    @SerializedName("fatherName")
+    @Expose
     val fatherName: String,
-    val diagnosisId: Int,
-    val wardId: Int
+    @SerializedName("diagnosisByDiagnosisId")
+    @Expose
+    val diagnosis: Diagnosis,
+    @SerializedName("wardsByWardId")
+    @Expose
+    val ward: Ward
 )
 
 data class Post(

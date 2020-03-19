@@ -13,9 +13,9 @@
         android:roundIcon="@drawable/polyclinic_logo_main"
         android:supportsRtl="true"
         android:theme="@style/PolyclinicTheme">
-        <activity android:name=".polyclinic.AllPatientActivity"></activity>
-        <activity android:name=".polyclinic.AddPatientActivity" />
-        <activity android:name=".polyclinic.AllWardsActivity" />
+        <activity android:name=".polyclinic.patient.all.AllPatientActivity" />
+        <activity android:name=".polyclinic.patient.add.AddPatientActivity" />
+        <activity android:name=".polyclinic.wards.all.AllWardsActivity" />
         <activity android:name=".polyclinic.PolyclinicMainToolbarActivity" />
         <activity
             android:name=".login.LoginActivity"

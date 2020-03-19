@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import com.example.polyclinic.polyclinic.android.BaseActivity
 import com.example.polyclinic.polyclinic.android.BaseToolbarActivity
 import com.example.polyclinic.polyclinic.android.R
 import com.example.polyclinic.polyclinic.android.api.RetrofitFactory
@@ -19,11 +21,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class LoginActivity : BaseToolbarActivity() {
-
-    companion object {
-        const val BASE_URL = "http://10.0.2.2:8081/"
-    }
+class LoginActivity : BaseActivity() {
 
     private var usernameInput: AutoCompleteTextView? = null
     private var passwordInput: EditText? = null
@@ -87,7 +85,7 @@ class LoginActivity : BaseToolbarActivity() {
         resetErrorsView()
         val username = usernameInput!!.text.toString()
         val password = passwordInput!!.text.toString()
-        val usersApi = RetrofitFactory.create(UserApiService::class.java, LoginActivity.BASE_URL)
+        val usersApi = RetrofitFactory.create(UserApiService::class.java)
         val user = User(-1, username, password)
         val result: Call<Result>
         if (loginButton!!.text == getString(R.string.login)) {

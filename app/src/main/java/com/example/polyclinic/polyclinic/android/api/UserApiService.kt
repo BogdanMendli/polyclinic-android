@@ -1,6 +1,5 @@
 package com.example.polyclinic.polyclinic.android.api
 
-
 import com.example.polyclinic.polyclinic.android.data.User
 import com.example.polyclinic.polyclinic.android.data.Result
 import retrofit2.Call

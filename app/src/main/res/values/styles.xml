@@ -119,4 +119,8 @@
     <style name="AppTheme.OverflowButtonStyle" parent="Widget.AppCompat.Light.ActionButton.Overflow">
         <item name="tint">@color/gray_1</item>
     </style>
+
+    <style name="Divider" parent="PolyclinicTheme">
+        <item name="background">@color/blue</item>
+    </style>
 </resources>
