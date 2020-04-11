@@ -15,6 +15,7 @@ import com.example.polyclinic.polyclinic.android.data.Diagnosis
 import com.example.polyclinic.polyclinic.android.data.People
 import com.example.polyclinic.polyclinic.android.data.Result
 import com.example.polyclinic.polyclinic.android.data.Ward
+import kotlinx.android.synthetic.main.activity_add_patient.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,14 +33,14 @@ class AddPatientActivity : HomeButtonToolbarActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        lastNameView = findViewById(R.id.last_name_input)
-        firstNameView = findViewById(R.id.first_name_input)
-        fatherNameView = findViewById(R.id.father_name_input)
-        diagnosisNameView = findViewById(R.id.diagnosis_name_input)
-        wardNameView = findViewById(R.id.ward_name_input)
-        errorTextView = findViewById(R.id.error_tv)
-        addPatientButton = findViewById(R.id.add_patient_button)
-        addPatientButton!!.setOnClickListener(this)
+        lastNameView = last_name_input
+        firstNameView = first_name_input
+        fatherNameView = father_name_input
+        diagnosisNameView = diagnosis_name_input
+        wardNameView = ward_name_input
+        errorTextView = error_tv
+        addPatientButton = add_patient_button
+        addPatientButton?.setOnClickListener(this)
         setToolbarTitle(R.string.add_person_add_patient_text)
     }
 
@@ -61,22 +62,22 @@ class AddPatientActivity : HomeButtonToolbarActivity(), View.OnClickListener {
                         return
                     }
 
-                    if (response.body()!!.result) {
+                    if (response.body() != null && response.body()?.result!!) {
                         resetViews()
                         Toast.makeText(context, "Patient successfully added", Toast.LENGTH_LONG).show()
                     } else {
-                        errorTextView!!.text = "Cannot add this patient"
+                        errorTextView?.text = getString(R.string.cannot_add_pat)
                     }
                 }
             })
     }
 
     override fun onClick(v: View?) {
-        val lastName = lastNameView!!.text.toString()
-        val firstName = firstNameView!!.text.toString()
-        val fatherName = fatherNameView!!.text.toString()
-        val diagnosisName = diagnosisNameView!!.text.toString()
-        val wardName = wardNameView!!.text.toString()
+        val lastName = lastNameView?.text.toString()
+        val firstName = firstNameView?.text.toString()
+        val fatherName = fatherNameView?.text.toString()
+        val diagnosisName = diagnosisNameView?.text.toString()
+        val wardName = wardNameView?.text.toString()
         var errorText: String? = null
         when (PatientHelper.checkCorrectPatientData(lastName, firstName, fatherName, diagnosisName, wardName)) {
             PatientDataCorrectType.INCORRECT_LAST_NAME -> errorText = "Incorrect last name, try again"
@@ -85,22 +86,22 @@ class AddPatientActivity : HomeButtonToolbarActivity(), View.OnClickListener {
             PatientDataCorrectType.INCORRECT_DIAGNOSIS_NAME -> errorText = "Incorrect diagnosis name, try again"
             PatientDataCorrectType.INCORRECT_WARD_NAME -> errorText = "Incorrect ward name, try again"
             PatientDataCorrectType.CORRECT -> {
-                errorTextView!!.text = ""
+                errorTextView?.text = ""
                 doRequestAddPatient(this, People(-1, firstName, lastName, fatherName,
                     Diagnosis(-1, diagnosisName),
                     Ward(-1, wardName, -1, Collections.emptyList())))
                 return
             }
         }
-        errorTextView!!.text = errorText
+        errorTextView?.text = errorText
     }
 
     private fun resetViews() {
-        lastNameView!!.text.clear()
-        firstNameView!!.text.clear()
-        fatherNameView!!.text.clear()
-        diagnosisNameView!!.text.clear()
-        wardNameView!!.text.clear()
-        lastNameView!!.requestFocus()
+        lastNameView?.text?.clear()
+        firstNameView?.text?.clear()
+        fatherNameView?.text?.clear()
+        diagnosisNameView?.text?.clear()
+        wardNameView?.text?.clear()
+        lastNameView?.requestFocus()
     }
 }

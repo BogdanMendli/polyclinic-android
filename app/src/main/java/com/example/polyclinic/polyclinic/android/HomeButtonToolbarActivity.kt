@@ -17,15 +17,17 @@ abstract class HomeButtonToolbarActivity : BaseToolbarActivity() {
             return
         }
 
-        supportActionBar!!.displayOptions = ActionBar.DISPLAY_HOME_AS_UP
-        supportActionBar!!.setHomeButtonEnabled(true)
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
-        supportActionBar!!.setHomeAsUpIndicator(
-            AppCompatResources.getDrawable(
-                this,
-                R.drawable.ic_home_button
+        supportActionBar?.let {
+            it.displayOptions = ActionBar.DISPLAY_HOME_AS_UP
+            it.setHomeButtonEnabled(true)
+            it.setDisplayShowHomeEnabled(true)
+            it.setHomeAsUpIndicator(
+                AppCompatResources.getDrawable(
+                    this,
+                    R.drawable.ic_home_button
+                )
             )
-        )
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

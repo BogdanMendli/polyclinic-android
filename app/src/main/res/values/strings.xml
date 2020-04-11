@@ -26,6 +26,7 @@
 
     <string name="welcome_text">Welcome, %s!</string>
     <string name="onboarding_text">You can view the list of patients in the clinic, wards , and add new patients</string>
+    <string name="cannot_add_pat">Cannot add this patient</string>
     <string name="all_person_all_patients_text">All patients</string>
     <string name="all_person_all_text">All</string>
     <string name="add_person_add_patient_text">Add patient</string>

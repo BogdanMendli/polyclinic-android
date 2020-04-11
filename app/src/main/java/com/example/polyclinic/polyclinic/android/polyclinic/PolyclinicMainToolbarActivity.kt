@@ -25,16 +25,16 @@ class PolyclinicMainToolbarActivity : BaseToolbarActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         welcomeUserTextView = findViewById(R.id.user_welcome_tv)
-        welcomeUserTextView!!.text = String.format(
+        welcomeUserTextView?.text = String.format(
             getString(R.string.welcome_text), intent.getStringExtra(USERNAME_KEY)
         )
 
         allPersonTextView = findViewById(R.id.all_person)
         addPersonTextView = findViewById(R.id.add_person)
         allWardsTextView = findViewById(R.id.all_wards)
-        allPersonTextView!!.setOnClickListener { handleAllPersonClick() }
-        addPersonTextView!!.setOnClickListener { handleAddPersonClick() }
-        allWardsTextView!!.setOnClickListener { handleAllWardsClick() }
+        allPersonTextView?.setOnClickListener { handleAllPersonClick() }
+        addPersonTextView?.setOnClickListener { handleAddPersonClick() }
+        allWardsTextView?.setOnClickListener { handleAllWardsClick() }
 
         setToolbarTitle(R.string.polyclinic_title)
     }

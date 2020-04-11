@@ -24,8 +24,8 @@ class AllPatientActivity : HomeButtonToolbarActivity() {
         setToolbarTitle(R.string.all_person_all_patients_text)
         adapter = AllPatientAdapter()
         patientRecyclerView = findViewById(R.id.patient_recycler)
-        patientRecyclerView!!.adapter = adapter
-        patientRecyclerView!!.layoutManager = LinearLayoutManager(this)
+        patientRecyclerView?.adapter = adapter
+        patientRecyclerView?.layoutManager = LinearLayoutManager(this)
         doRequestPatient(this)
     }
 
@@ -45,7 +45,7 @@ class AllPatientActivity : HomeButtonToolbarActivity() {
                     return
                 }
 
-                adapter!!.setPatients(response.body())
+                adapter?.setPatients(response.body())
             }
         })
     }

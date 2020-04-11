@@ -20,7 +20,7 @@ abstract class BaseToolbarActivity : BaseActivity() {
         toolbar = findViewById(R.id.base_toolbar)
         toolbarShadow = findViewById(R.id.base_toolbar_shadow)
 
-        setSupportActionBar(toolbar!!)
+        setSupportActionBar(toolbar)
     }
 
     @LayoutRes
@@ -32,7 +32,7 @@ abstract class BaseToolbarActivity : BaseActivity() {
 
     open fun setToolbarTitle(title: CharSequence?) {
         if (isToolbarTitleEnabled() && title != null) {
-            toolbar!!.title = title
+            toolbar?.title = title
         }
     }
 

@@ -24,8 +24,8 @@ class AllWardsActivity : HomeButtonToolbarActivity() {
         setToolbarTitle(R.string.all_wards_all_wards_text)
         adapter = AllWardsAdapter()
         patientRecyclerView = findViewById(R.id.ward_recycler)
-        patientRecyclerView!!.adapter = adapter
-        patientRecyclerView!!.layoutManager = LinearLayoutManager(this)
+        patientRecyclerView?.adapter = adapter
+        patientRecyclerView?.layoutManager = LinearLayoutManager(this)
         doRequestPatient(this)
     }
 
@@ -45,7 +45,7 @@ class AllWardsActivity : HomeButtonToolbarActivity() {
                     return
                 }
 
-                adapter!!.setWards(response.body())
+                adapter?.setWards(response.body())
             }
         })
     }
