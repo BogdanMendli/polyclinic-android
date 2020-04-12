@@ -7,13 +7,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.polyclinic.polyclinic.android.R
 import com.example.polyclinic.polyclinic.android.data.People
+import com.example.polyclinic.polyclinic.android.data.PeopleInfo
 
-class AllPatientAdapter : RecyclerView.Adapter<AllPatientViewHolder>() {
+class AllPatientAdapter(private val clickListener: AllPatientViewHolder.OnEditPersonClickListener) :
+    RecyclerView.Adapter<AllPatientViewHolder>() {
 
     private var patients: List<People> = ArrayList()
 
     override fun onCreateViewHolder(
-        parent: ViewGroup, viewType: Int): AllPatientViewHolder {
+        parent: ViewGroup, viewType: Int
+    ): AllPatientViewHolder {
         return AllPatientViewHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.polyclinic_patient, parent, false)
@@ -21,7 +24,7 @@ class AllPatientAdapter : RecyclerView.Adapter<AllPatientViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: AllPatientViewHolder, position: Int) {
-        holder.bind(patients[position])
+        holder.bind(patients[position], clickListener)
     }
 
     override fun getItemCount(): Int {

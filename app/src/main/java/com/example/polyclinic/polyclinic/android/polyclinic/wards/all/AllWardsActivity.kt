@@ -34,19 +34,21 @@ class AllWardsActivity : HomeButtonToolbarActivity() {
     }
 
     private fun doRequestPatient(context: Context) {
-        RetrofitFactory.create(PolyclinicApiService::class.java).getWards().enqueue(object: Callback<List<Ward>> {
-            override fun onFailure(call: Call<List<Ward>>, t: Throwable) {
-                Toast.makeText(context, "something went wrong ${t.message}", Toast.LENGTH_LONG).show()
-            }
-
-            override fun onResponse(call: Call<List<Ward>>, response: Response<List<Ward>>) {
-                if (!response.isSuccessful) {
-                    Toast.makeText(context, "code ${response.code()}", Toast.LENGTH_LONG).show()
-                    return
+        RetrofitFactory.create(PolyclinicApiService::class.java).getWards()
+            .enqueue(object : Callback<List<Ward>> {
+                override fun onFailure(call: Call<List<Ward>>, t: Throwable) {
+                    Toast.makeText(context, "something went wrong ${t.message}", Toast.LENGTH_LONG)
+                        .show()
                 }
 
-                adapter?.setWards(response.body())
-            }
-        })
+                override fun onResponse(call: Call<List<Ward>>, response: Response<List<Ward>>) {
+                    if (!response.isSuccessful) {
+                        Toast.makeText(context, "code ${response.code()}", Toast.LENGTH_LONG).show()
+                        return
+                    }
+
+                    adapter?.setWards(response.body())
+                }
+            })
     }
 }

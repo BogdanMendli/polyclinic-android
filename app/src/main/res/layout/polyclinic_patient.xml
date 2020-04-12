@@ -89,5 +89,18 @@
         android:layout_marginTop="@dimen/padding_normal"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/person_image" />
+        app:layout_constraintTop_toBottomOf="@id/edit_person_tv" />
+
+    <TextView
+        android:id="@+id/edit_person_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_person"
+        android:layout_marginVertical="@dimen/padding_tiny"
+        android:textSize="@dimen/text_size_default_plus_2"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toLeftOf="@id/person_image"
+        app:layout_constraintRight_toRightOf="@id/person_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/person_image"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

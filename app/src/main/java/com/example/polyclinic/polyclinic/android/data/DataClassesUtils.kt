@@ -25,10 +25,10 @@ data class Ward(
     val id: Int,
     @SerializedName("name")
     @Expose
-    val name: String,
+    var name: String,
     @SerializedName("maxCount")
     @Expose
-    val maxCount: Int,
+    var maxCount: Int,
     @SerializedName("peopleEntities")
     @Expose
     val patients: List<People>
@@ -38,26 +38,26 @@ data class Diagnosis(
     val id: Int,
     @SerializedName("name")
     @Expose
-    val name: String
+    var name: String
 )
 
 data class People(
     val id: Int,
     @SerializedName("firstName")
     @Expose
-    val firstName: String,
+    var firstName: String,
     @SerializedName("lastName")
     @Expose
-    val lastName: String,
+    var lastName: String,
     @SerializedName("fatherName")
     @Expose
-    val fatherName: String,
+    var fatherName: String,
     @SerializedName("diagnosisByDiagnosisId")
     @Expose
-    val diagnosis: Diagnosis,
+    var diagnosis: Diagnosis,
     @SerializedName("wardsByWardId")
     @Expose
-    val ward: Ward
+    var ward: Ward
 )
 
 data class Post(

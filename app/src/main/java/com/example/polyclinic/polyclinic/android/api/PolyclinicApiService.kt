@@ -18,4 +18,7 @@ interface PolyclinicApiService {
 
     @POST("/polyclinic/spbstu/users/people/add")
     fun addPatient(@Body patient: People): Call<Result>
+
+    @POST("/polyclinic/spbstu/users/people/update")
+    fun updatePatient(@Body patient: People): Call<Result>
 }

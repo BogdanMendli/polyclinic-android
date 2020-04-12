@@ -7,7 +7,7 @@ import android.view.MenuItem
 import android.widget.TextView
 import com.example.polyclinic.polyclinic.android.BaseToolbarActivity
 import com.example.polyclinic.polyclinic.android.R
-import com.example.polyclinic.polyclinic.android.polyclinic.patient.add.AddPatientActivity
+import com.example.polyclinic.polyclinic.android.polyclinic.patient.add.AddEditPatientActivity
 import com.example.polyclinic.polyclinic.android.polyclinic.patient.all.AllPatientActivity
 import com.example.polyclinic.polyclinic.android.polyclinic.wards.all.AllWardsActivity
 
@@ -71,7 +71,7 @@ class PolyclinicMainToolbarActivity : BaseToolbarActivity() {
     }
 
     private fun handleAddPersonClick() {
-        startActivity(Intent(this, AddPatientActivity::class.java))
+        startActivity(Intent(this, AddEditPatientActivity::class.java))
     }
 
     private fun handleAllWardsClick() {

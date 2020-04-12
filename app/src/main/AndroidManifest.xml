@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/PolyclinicTheme">
         <activity android:name=".polyclinic.patient.all.AllPatientActivity" />
-        <activity android:name=".polyclinic.patient.add.AddPatientActivity" />
+        <activity android:name=".polyclinic.patient.add.AddEditPatientActivity" />
         <activity android:name=".polyclinic.wards.all.AllWardsActivity" />
         <activity android:name=".polyclinic.PolyclinicMainToolbarActivity" />
         <activity

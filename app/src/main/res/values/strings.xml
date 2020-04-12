@@ -27,13 +27,18 @@
     <string name="welcome_text">Welcome, %s!</string>
     <string name="onboarding_text">You can view the list of patients in the clinic, wards , and add new patients</string>
     <string name="cannot_add_pat">Cannot add this patient</string>
+    <string name="cannot_update_pat">Cannot update this patient</string>
+    <string name="ward_full">Ward is full</string>
+    <string name="edit_patient">Edit patient</string>
     <string name="all_person_all_patients_text">All patients</string>
     <string name="all_person_all_text">All</string>
     <string name="add_person_add_patient_text">Add patient</string>
     <string name="add_person_add_text">Add</string>
+    <string name="save_person_save_text">Save</string>
     <string name="single_ward">Ward : </string>
     <string name="single_ward_max_count">Max count : </string>
     <string name="single_diagnosis">Diagnosis : </string>
     <string name="all_wards_all_wards_text">All wards</string>
     <string name="all_wards_wards_text">Wards</string>
+    <string name="edit_person"><u>Edit</u></string>
 </resources>
